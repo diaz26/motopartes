@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <body>
-  <div data-role="page" id="page1">
+  <div data-role="page">
     <div data-role="header">
-      <a href="#"  data-transition="flip" data-icon="home">Inicio</a>
-      <h1> <img src="<?= base_url(); ?>jquery.mobile/images/inicial.png" width="15%"> </h1>
-      <a href="#" data-transition="flip"  data-icon="grid">Login</a>
 
-      <nav data-role="navbar">
-        <ul>
-          <li><a href="#page2">Productos</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">¿Quienes somos?</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
     </div>
-
-    <div data-role="main" data-theme="c">
+    <div data-role="main">
       <div class="ui-content">
-        <form class="" action="<?= base_url(); ?>index.php/login/mostrar" method="post" data-ajax="false">
+        <form class="" action="<?= base_url(); ?>index.php/login/valida" method="post" data-ajax="false">
           <center>
-            <input type="number" name="num1" style="text-align:center" placeholder="Columna a">
-            <input type="number" name="num2" style="text-align:center" placeholder="Columna b">
-            <button type="submit" name="button" style="width:30%">Enviar</button>
+            <input type="text" name="user" style="text-align:center" placeholder="User">
+            <input type="password" name="pass" style="text-align:center" placeholder="Pass">
+            <input type="password" name="security" style="text-align:center" placeholder="Security">
+            <button type="submit" name="button" style="width:30%">Ingresar</button>
           </center>
         </form>
       </div>
