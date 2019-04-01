@@ -10,10 +10,4 @@ class Login extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function mostrar()
-	{
-		$this->load->view('header');
-		$this->load->view('view_rta');
-		$this->load->view('footer');
-	}
 }
