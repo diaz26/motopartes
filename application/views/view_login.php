@@ -3,7 +3,8 @@
 <body>
   <div data-role="page">
     <div data-role="header">
-
+      <a href="<?= base_url(); ?>"  data-transition="flip" data-icon="home">Home</a>
+      <h1> <img src="<?= base_url(); ?>jquery.mobile/images/inicial.png" width="100%"> </h1>
     </div>
     <div data-role="main">
       <div class="ui-content">
