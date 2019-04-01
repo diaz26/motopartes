@@ -10,13 +10,16 @@
       <div class="ui-content">
         <form class="" action="<?= base_url(); ?>index.php/login/valida" method="post" data-ajax="false">
           <center>
-            <input type="text" name="user" style="text-align:center" placeholder="User">
-            <input type="password" name="pass" style="text-align:center" placeholder="Pass">
-            <input type="password" name="security" style="text-align:center" placeholder="Security">
-            <button type="submit" name="button" style="width:30%">Ingresar</button>
+            <div style="width:65%">
+              <input type="text" name="user" style="text-align:center" placeholder="User">
+              <input type="password" name="pass" style="text-align:center" placeholder="Password">
+              <input type="password" name="security" style="text-align:center" placeholder="Security">
+              <button type="submit" name="button" style="width:50%">Ingresar</button>
+            </div>
           </center>
         </form>
       </div>
+      <h1> <img src="<?= base_url(); ?>jquery.mobile/images/yamaha.jpg" width="100%"> </h1>
     </div>
     <div data-role="footer">
 
