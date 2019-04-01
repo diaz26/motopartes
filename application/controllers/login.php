@@ -16,4 +16,5 @@ class Login extends CI_Controller {
 		$this->load->view('view_rta');
 		$this->load->view('footer');
 	}
+	
 }
