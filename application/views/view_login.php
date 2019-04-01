@@ -4,14 +4,14 @@
   <div data-role="page" id="page1">
     <div data-role="header">
       <a href="#"  data-transition="flip" data-icon="home">Inicio</a>
-      <h1> <img src="<?= base_url(); ?>jquery.mobile/images/leon.png" width="15%"> </h1>
+      <h1> <img src="<?= base_url(); ?>jquery.mobile/images/inicial.png" width="15%"> </h1>
       <a href="#" data-transition="flip"  data-icon="grid">Login</a>
 
       <nav data-role="navbar">
         <ul>
-          <li><a href="#page2">acerca</a></li>
+          <li><a href="#page2">Productos</a></li>
           <li><a href="#">Productos</a></li>
-          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">¿Quienes somos?</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
       </nav>
