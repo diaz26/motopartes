@@ -15,6 +15,9 @@
               <input type="password" name="pass" style="text-align:center" placeholder="Password">
               <input type="password" name="security" style="text-align:center" placeholder="Security">
               <button type="submit" name="button" style="width:50%">Ingresar</button>
+              <div style="text-align:center">
+                <?php echo $this->session->flashdata('msg'); ?>
+              </div>
             </div>
           </center>
         </form>

@@ -36,10 +36,20 @@ class Login extends CI_Controller {
 			);
 
 			$this->session->set_userdata($session);
-			redirect("admin");
+			redirect("admin",'refresh');
 		}else {
-			redirect("login",'refresh');
+			$this->session->set_flashdata('msg', '<div> User/Password/Security Invalido</div>');
+			redirect("".base_url()."index.php/login");
 		}
 
+	}
+
+	public function session_dest(){
+		$session = array(
+			'logged_in' => FALSE
+		);
+		$this->session->set_userdata($session);
+		$this->session->sess_destroy();
+		redirect('login');
 	}
 }
