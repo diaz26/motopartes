@@ -50,6 +50,6 @@ class Login extends CI_Controller {
 		);
 		$this->session->set_userdata($session);
 		$this->session->sess_destroy();
-		redirect('login');
+		redirect("".base_url()."index.php/login");
 	}
 }
