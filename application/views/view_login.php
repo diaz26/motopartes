@@ -11,9 +11,9 @@
         <form class="" action="<?= base_url(); ?>index.php/login/valida" method="post" data-ajax="false">
           <center>
             <div style="width:65%">
-              <input type="text" name="user" style="text-align:center" placeholder="User">
-              <input type="password" name="pass" style="text-align:center" placeholder="Password">
-              <input type="password" name="security" style="text-align:center" placeholder="Security">
+              <input required type="text" name="user" style="text-align:center" placeholder="User">
+              <input required type="password" name="pass" style="text-align:center" placeholder="Password">
+              <input required type="password" name="security" style="text-align:center" placeholder="Security">
               <button type="submit" name="button" style="width:50%">Ingresar</button>
               <div style="text-align:center">
                 <?php echo $this->session->flashdata('msg'); ?>

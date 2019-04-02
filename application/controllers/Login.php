@@ -36,9 +36,9 @@ class Login extends CI_Controller {
 			);
 
 			$this->session->set_userdata($session);
-			redirect("admin",'refresh');
+			redirect("".base_url()."index.php/admin");
 		}else {
-			$this->session->set_flashdata('msg', '<div> User/Password/Security Invalido</div>');
+			$this->session->set_flashdata('msg', '<div> User/Password or Security Invalid</div>');
 			redirect("".base_url()."index.php/login");
 		}
 
