@@ -11,7 +11,7 @@
 
       <nav data-role="navbar">
         <ul>
-          <li><a href="<?= base_url(); ?>index.php/info">Informacion</a></li>
+          <li><a href="<?= base_url(); ?>index.php/Info">Informacion</a></li><!--hey aqui le cambie info por Info, no me meti con mas att: Felipe -->
           <li><a href="<?= base_url(); ?>index.php/productos">Productos</a></li>
           <li><a href="<?= base_url(); ?>index.php/pedidos">Pedidos</a></li>
           <li><a href="<?= base_url(); ?>index.php/ventas">Ultimas ventas</a></li>
