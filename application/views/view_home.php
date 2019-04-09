@@ -28,14 +28,14 @@
       </ul>
       <div class="ui-grid-a">
         <div class="ui-block-c">
-          <div class="ui-bar ui-bar-a" style="background-color:<?php echo $info->bg_subtitulo; ?>;color:<?php echo $info->color_subtitulo; ?> ;text-align: center">Cúpula frontal  - MT 09</div>
-          <div class="ui-bar ui-bar-a" style="background-color:<?php echo $info->bg_card; ?>"><img src="<?= base_url(); ?>jquery.mobile/images/cupula.jpg" width="100%"> </div>
-          <div class="ui-bar ui-bar-a" style="background-color:#B2F7D9;text-align: center">Carenaje - R1</div>
-          <div class="ui-bar ui-bar-a" style="background-color:#E1E1E1"><img src="<?= base_url(); ?>jquery.mobile/images/yamaha.jpg" width="100%"> </div>
-          <div class="ui-bar ui-bar-a" style="background-color:#B2F7D9;text-align: center">Kit de arrastre - Evo R3</div>
-          <div class="ui-bar ui-bar-a" style="background-color:#E1E1E1"><img src="<?= base_url(); ?>jquery.mobile/images/kitarr.jpg" width="100%"> </div>
-          <div class="ui-bar ui-bar-a" style="background-color:#B2F7D9;text-align: center">Sliders - MT 07</div>
-          <div class="ui-bar ui-bar-a" style="background-color:#E1E1E1"><img src="<?= base_url(); ?>jquery.mobile/images/sliders.jpg" width="100%"> </div>
+          <?php
+          foreach ($productos as $key) {
+           ?>
+          <div class="ui-bar ui-bar-a" style="background-color:<?php echo $info->bg_subtitulo; ?>;color:<?php echo $info->color_subtitulo; ?> ;text-align: center"><?php echo $key->nombre; ?></div>
+          <div class="ui-bar ui-bar-a" style="background-color:<?php echo $info->bg_card; ?>"><img src="<?= base_url().$key->img; ?>" width="100%"> </div>
+          <?php
+        }
+          ?>
         </div>
       </div>
     </div>

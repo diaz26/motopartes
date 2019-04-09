@@ -34,9 +34,32 @@ CREATE TABLE `part_articulos` (
   `id_color` int(11) DEFAULT NULL,
   `img` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `part_articulos` */
+
+insert  into `part_articulos`(`id`,`nombre`,`descripcion`,`id_parte`,`ubicacion`,`cantidad`,`precio`,`id_marca`,`id_referencia`,`year`,`id_color`,`img`) values 
+(1,'Cúpula frontal  - MT 09','Carenaje de la farola','1','frente',2,400000.00,1,1,2018,1,'jquery.mobile/images/cupula.jpg'),
+(2,'Carenaje - R1','Carenaje completo','2','todo',1,4500000.00,1,2,2019,2,'jquery.mobile/images/yamaha.jpg'),
+(3,'Kit de arrastre - Evo R3','Kit de arrastre (cadenilla y piñones)','3','abajo',5,45000.00,5,3,2017,3,'jquery.mobile/images/kitarr.jpg'),
+(4,'Sliders - MT 07','Sliders-Protecciones laterales','4','Lateral',10,70000.00,1,4,2016,3,'jquery.mobile/images/sliders.jpg');
+
+/*Table structure for table `part_colores` */
+
+DROP TABLE IF EXISTS `part_colores`;
+
+CREATE TABLE `part_colores` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `color` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+/*Data for the table `part_colores` */
+
+insert  into `part_colores`(`id`,`color`) values 
+(1,'Negro'),
+(2,'Blanco'),
+(3,'Metal');
 
 /*Table structure for table `part_info` */
 
@@ -73,6 +96,63 @@ CREATE TABLE `part_info` (
 
 insert  into `part_info`(`id`,`opcion1`,`opcion2`,`img`,`bg_header`,`bg_botones`,`color_letra_botones`,`opcion3`,`opcion4`,`opcion5`,`bg_opciones`,`color_opciones`,`descri1`,`descri2`,`descri3`,`bg_descripciones`,`titulo`,`bg_titulo`,`color_titulo`,`bg_subtitulo`,`color_subtitulo`,`color_descripciones`,`bg_card`) values 
 (1,'Home','Login','jquery.mobile/images/inicial.png','#F72929','#000000','#FFFFFF','Productos','¿Quienes somos?','Contacto','#A8E5CD','#000000','Compra tus repuestos desde la comodidad de tu hogar','Envíos Nacionales Garantizados','Repuestos importados 100% originales','#A8C8E5','Algunos de nuestros productos','#A8E5CD','#000000','#B2F7D9','#000000','#000000','#E1E1E1');
+
+/*Table structure for table `part_marcas` */
+
+DROP TABLE IF EXISTS `part_marcas`;
+
+CREATE TABLE `part_marcas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `marca` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+/*Data for the table `part_marcas` */
+
+insert  into `part_marcas`(`id`,`marca`) values 
+(1,'Yamaha'),
+(2,'Honda'),
+(3,'Suzuki'),
+(4,'Kawasaki'),
+(5,'AKT'),
+(6,'KTM'),
+(7,'BMW');
+
+/*Table structure for table `part_parte` */
+
+DROP TABLE IF EXISTS `part_parte`;
+
+CREATE TABLE `part_parte` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parte` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+/*Data for the table `part_parte` */
+
+insert  into `part_parte`(`id`,`parte`) values 
+(1,'Farola'),
+(2,'Completo'),
+(3,'Rodamiento'),
+(4,'Proteccion');
+
+/*Table structure for table `part_referencias` */
+
+DROP TABLE IF EXISTS `part_referencias`;
+
+CREATE TABLE `part_referencias` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `referencia` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+/*Data for the table `part_referencias` */
+
+insert  into `part_referencias`(`id`,`referencia`) values 
+(1,'MT-09'),
+(2,'R1'),
+(3,'Evo-R3'),
+(4,'MT-07');
 
 /*Table structure for table `part_usuarios` */
 
