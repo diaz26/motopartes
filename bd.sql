@@ -89,13 +89,15 @@ CREATE TABLE `part_info` (
   `color_subtitulo` varchar(20) DEFAULT NULL,
   `color_descripciones` varchar(20) DEFAULT NULL,
   `bg_card` varchar(20) DEFAULT NULL,
+  `opcion6` varchar(20) DEFAULT NULL,
+  `opcion7` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `part_info` */
 
-insert  into `part_info`(`id`,`opcion1`,`opcion2`,`img`,`bg_header`,`bg_botones`,`color_letra_botones`,`opcion3`,`opcion4`,`opcion5`,`bg_opciones`,`color_opciones`,`descri1`,`descri2`,`descri3`,`bg_descripciones`,`titulo`,`bg_titulo`,`color_titulo`,`bg_subtitulo`,`color_subtitulo`,`color_descripciones`,`bg_card`) values 
-(1,'Home','Login','jquery.mobile/images/inicial.png','#F72929','#000000','#FFFFFF','Productos','¿Quienes somos?','Contacto','#A8E5CD','#000000','Compra tus repuestos desde la comodidad de tu hogar','Envíos Nacionales Garantizados','Repuestos importados 100% originales','#A8C8E5','Algunos de nuestros productos','#A8E5CD','#000000','#B2F7D9','#000000','#000000','#E1E1E1');
+insert  into `part_info`(`id`,`opcion1`,`opcion2`,`img`,`bg_header`,`bg_botones`,`color_letra_botones`,`opcion3`,`opcion4`,`opcion5`,`bg_opciones`,`color_opciones`,`descri1`,`descri2`,`descri3`,`bg_descripciones`,`titulo`,`bg_titulo`,`color_titulo`,`bg_subtitulo`,`color_subtitulo`,`color_descripciones`,`bg_card`,`opcion6`,`opcion7`) values 
+(1,'Home','Login','jquery.mobile/images/inicial.png','#F72929','#000000','#FFFFFF','Productos','¿Quienes somos?','Contacto','#000000','#FFFFFF','Compra tus repuestos desde la comodidad de tu hogar','Envíos Nacionales Garantizados','Repuestos importados 100% originales','#A8C8E5','Algunos de nuestros productos','#000000','#FFFFFF','#B2F7D9','#000000','#000000','#E1E1E1','Detalles','Ver en tienda');
 
 /*Table structure for table `part_marcas` */
 
