@@ -11,19 +11,39 @@
 
       <nav data-role="navbar">
         <ul>
-          <li><a href="<?= base_url(); ?>index.php/Info">Informacion</a></li><!--hey aqui le cambie info por Info, no me meti con mas att: Felipe -->
-          <li><a href="<?= base_url(); ?>index.php/Productos/llevame">Productos</a></li>
+          <li><a href="<?= base_url(); ?>index.php/Info">Informacionnn</a></li><!--hey aqui le cambie info por Info, no me meti con mas att: Felipe -->
+          <li><a href="<?= base_url(); ?>index.php/productos">Productos</a></li>
           <li><a href="<?= base_url(); ?>index.php/pedidos">Pedidos</a></li>
           <li><a href="<?= base_url(); ?>index.php/ventas">Ultimas ventas</a></li>
         </ul>
       </nav>
     </div>
     <div data-role="main">
-      admin
-      <form>
-              <center><input type="button" value="Agregar producto" data-inline="true"></center>
+      <table>
+        <tr>
+          <td>nombre </td>
+          <td>descripcion</td>
+        </tr>
+      </table>
 
-      </form>
+       <?php
+
+      if ($Datos!=FALSE) {
+        foreach ($Datos->result() as $row){
+          echo  "<tr>";
+          echo "<td>".$row->nombre."</td>";
+          echo "<td>".$row->descripcion." </td>";
+          echo "</tr>";
+
+        }
+      }
+
+         // code...
+
+         //echo $row->nombre;
+
+       ?>
+
     </div>
     <div data-role="footer">
 
