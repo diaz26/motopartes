@@ -11,6 +11,7 @@
   <title><?= $nav->nombre_web; ?></title>
   <link rel="shortcut icon" href="<?= base_url().$nav->logo; ?>" >
   <link rel="icon" href="<?= base_url().$nav->logo; ?>" >
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: <?= $nav->bg_color; ?>;">
@@ -27,22 +28,12 @@
           <a class="nav-link" href="<?= base_url(); ?>"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px"><?= $nav->op1; ?></b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>index.php/productos"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px"><?= $nav->op2; ?></b></a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px"><?= $nav->op4; ?></b> </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>index.php/login"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px">Ingresar</b></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>index.php/carrito"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px">Carrito</b></a>
+          <a class="nav-link" href="<?= base_url(); ?>index.php/productos"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px">Productos</b></a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" action="<?= base_url(); ?>index.php/productos/buscar" method="post">
-        <input class="form-control mr-sm-2" type="search" name="search" placeholder="<?= $nav->search; ?>" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="font-family: <?= $nav->fuente ?>;background-color: <?= $nav->btn_bgcolor; ?>; color: <?= $nav->btn_bordercolor; ?>;border-color: <?= $nav->btn_bordercolor; ?>">Buscar</button>
-      </form>
     </div>
   </nav>
 

@@ -11,10 +11,12 @@
   <title><?= $nav->nombre_web; ?></title>
   <link rel="shortcut icon" href="<?= base_url().$nav->logo; ?>" >
   <link rel="icon" href="<?= base_url().$nav->logo; ?>" >
+  <script type="text/javascript" language="javascript" src="<?= base_url() ?>assets/js/colorPicker.js"></script>
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/colorPicker.css" type="text/css"></link>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: <?= $nav->bg_color; ?>;">
-    <a class="navbar-brand" href="<?= base_url(); ?>">
+    <a class="navbar-brand" href="<?= base_url(); ?>index.php/admin">
       <img src="<?= base_url().$nav->logo; ?>" width="30" height="30" class="d-inline-block align-top" alt="">
     <b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px"><?= $nav->nombre; ?></b>
     </a>
@@ -24,25 +26,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto" style="text-align: right">
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px"><?= $nav->op1; ?></b></a>
+          <a class="nav-link" href="<?= base_url(); ?>index.php/admin#home"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px"><?= $nav->op1; ?></b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>index.php/productos"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px"><?= $nav->op2; ?></b></a>
+          <a class="nav-link" href="<?= base_url(); ?>index.php/admin#banner"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px">Editar página</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px"><?= $nav->op4; ?></b> </a>
+          <a class="nav-link" href="<?= base_url(); ?>index.php/admin#productos"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px">Editar productos</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>index.php/login"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px">Ingresar</b></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url(); ?>index.php/carrito"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px">Carrito</b></a>
+          <a class="nav-link" href="<?= base_url(); ?>index.php/admin#pedidos"><b style="font-family: <?= $nav->fuente ?>;font-size: <?= $nav->size; ?>px">Pedidos</b></a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" action="<?= base_url(); ?>index.php/productos/buscar" method="post">
-        <input class="form-control mr-sm-2" type="search" name="search" placeholder="<?= $nav->search; ?>" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="font-family: <?= $nav->fuente ?>;background-color: <?= $nav->btn_bgcolor; ?>; color: <?= $nav->btn_bordercolor; ?>;border-color: <?= $nav->btn_bordercolor; ?>">Buscar</button>
-      </form>
     </div>
   </nav>
 

@@ -1,47 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 </head>
-<body>
-  <div data-role="page">
-    <div data-role="header" style="background-color: <?= $info->bg_header; ?>">
-      <a href="<?= base_url(); ?>"  data-transition="flip" data-icon="home" style="background-color: <?= $info->bg_botones; ?>; color:<?= $info->color_letra_botones; ?>;border-color: <?= $info->bg_botones; ?>"><?= $info->opcion1; ?></a>
-      <h1> <img src="<?= base_url().$info->img; ?>" width="100%"> </h1>
-      <a href="<?= base_url(); ?>index.php/login" data-transition="flip"  data-icon="grid" style="background-color: <?= $info->bg_botones; ?>; color:<?= $info->color_letra_botones; ?>;border-color: <?= $info->bg_botones; ?>"><?= $info->opcion2; ?></a>
+<body data-spy="scroll" data-target=".navbar-default" data-offset="100">
+  <section id="banner">
+    <div class="content">
+      <div class="container">
+        <div class="col-md-10 col-12 ml-auto mr-auto">
+          <center><?php echo $this->session->flashdata('error'); ?></center>
+          <h3><b>Agregar producto</b></h3>
+          <hr>
+          <form action="<?=base_url(); ?>index.php/Productos/agregardeverdad/" method="post" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-3 pr-md-1">
+                <div class="form-group">
+                  <label><b>Nombre:</b></label><br>
+                  <input type="text" class="form-control" name="nombre" required>
+                </div>
+              </div>
+              <div class="col-md-3 px-md-1">
+                <div class="form-group">
+                  <label><b>Marca:</b></label><br>
+                  <input type="text" class="form-control" name="marca" required>
+                </div>
+              </div>
+              <div class="col-md-3 px-md-1">
+                <div class="form-group">
+                  <label><b>Referencia:</b></label><br>
+                  <input type="text" class="form-control" name="referencia" required>
+                </div>
+              </div>
+              <div class="col-md-3 pl-md-1">
+                <div class="form-group">
+                  <label><b>Año:</b></label><br>
+                  <input type="number" class="form-control" name="year" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 pr-md-1">
+                <div class="form-group">
+                  <label><b>Parte:</b></label><br>
+                  <input type="text" class="form-control" name="parte"  required>
+                </div>
+              </div>
+              <div class="col-md-3 px-md-1">
+                <div class="form-group">
+                  <label><b>Ubicacion:</b></label><br>
+                  <input type="text" class="form-control" name="ubicacion" required>
+                </div>
+              </div>
+              <div class="col-md-3 px-md-1">
+                <div class="form-group">
+                  <label><b>Color:</b></label><br>
+                  <input type="text" class="form-control" name="color" required>
+                </div>
+              </div>
+              <div class="col-md-3 pl-md-1">
+                <div class="form-group">
+                  <label><b>Precio:</b></label><br>
+                  <input type="number" step="any" class="form-control" name="precio" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pr-md-1">
+                <div class="form-group">
+                  <label><b>Descripcion:</b></label><br>
+                  <textarea name="descripcion" class="form-control" rows="3" required></textarea>
+                </div>
+              </div>
+              <div class="col-md-6 pl-md-1">
+                <div class="form-group">
+                  <b>Imagen:</b><br><img src="" width="30%" id="imaproducto">
+                  <input type="file" name="tcarga" id="upload" value="">
+                  <script>
+                  document.getElementById("upload").onchange = function() {
+                    var reader = new FileReader(); //instanciamos el objeto de la api FileReader
 
-      <nav data-role="navbar" >
-        <ul>
-          <li ><a style="background-color: <?php echo $info->bg_opciones; ?>; color: <?php echo $info->color_opciones; ?>" href="<?= base_url(); ?>index.php/productos"><?php echo $info->opcion3; ?></a></li>
-          <li><a style="background-color: <?php echo $info->bg_opciones; ?>; color: <?php echo $info->color_opciones; ?>" href="<?= base_url(); ?>index.php/about_us"><?php echo $info->opcion4; ?></a></li>
-          <li><a style="background-color: <?php echo $info->bg_opciones; ?>; color: <?php echo $info->color_opciones; ?>" href="<?= base_url(); ?>index.php/contact"><?php echo $info->opcion5; ?></a></li>
-        </ul>
-      </nav>
+                    reader.onload = function(e) {
+                      document.getElementById("imaproducto").src = e.target.result;
+                    };
+
+                    // read the image file as a data URL.
+                    reader.readAsDataURL(this.files[0]);
+                  };
+                  </script>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 pl-md-1">
+                <br>
+                <center><input type="submit" value="Agregar" style="width:150px;border-color:<?php echo $nav->btn_bordercolor; ?>;color:<?php echo $nav->btn_bordercolor; ?> ;background-color:<?php echo $nav->btn_bgcolor; ?>" class="form-control"></center>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
     </div>
-    <div data-role="main">
-      <ul data-role="listview">
-        <li style="background-color: <?php echo $info->bg_descripciones; ?>; color: <?php echo $info->color_descripciones; ?> ;padding-top: 0px;padding-bottom: 0px"><p style="font-size:14px"><?php echo $info->descri1; ?></p></li>
-        <li style="background-color: <?php echo $info->bg_descripciones; ?>; color: <?php echo $info->color_descripciones; ?> ;padding-top: 0px;padding-bottom: 0px">
-          <p style="font-size:14px"><img src="<?= base_url(); ?>jquery.mobile/demos/_assets/img/col.png" width="5%" class="ui-li-icon">
-            <?php echo $info->descri2; ?>
-          </p>
-        </li>
-        <li style="background-color: <?php echo $info->bg_descripciones; ?>; color: <?php echo $info->color_descripciones; ?> ;padding-top: 0px;padding-bottom: 0px"><p style="font-size:14px"><?php echo $info->descri3; ?></p></li>
-      </ul>
-
-      <ul data-role="listview" >
-        <li data-role="list-divider" style="color: <?php echo $info->color_titulo; ?>;background-color: <?php echo $info->bg_titulo; ?>;text-align:center"><?php echo $info->titulo; ?></li>
-      </ul>
-      <hr>
-
-    </div>
-    <div data-role="footer">
-
-    </div>
-
   </div>
-
+</section>
 </body>
+<!-- Mirrored from design-graphma.com/demo/sedmy/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Mar 2019 04:47:26 GMT -->
 </html>
