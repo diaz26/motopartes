@@ -5,23 +5,26 @@ class Model_login extends CI_Model {
 
   function __construct(){
     parent::__construct();
-  }
 
-  public function validar($user,$pass,$secu){
-    $sql="SELECT count(*) cuenta from web_users where user='$user' and pass='$pass' and security='$secu'";
+  }
+  public function comprobar($users,$pass){
+    $sql="SELECT COUNT(*) comprobando FROM web_users WHERE user='$users' AND pass='$pass'";
     $query=$this->db->query($sql);
     return $query->row();
   }
-
-  public function consulta_user($user,$pass,$secu){
-    $sql="SELECT * from web_users where user='$user' and pass='$pass' and security='$secu'";
-    $query=$this->db->query($sql);
-    return $query->row();
-  }
-  /*
-  public function actualiza_pass($user,$pass){
+  public function actualizar_clave($user,$newpass){
     $this->db->where('user',$user);
-    $this->db->update('usuarios',array('pass'=>$pass));
-  }*/
+    $this->db->update('baseo_usuarios',array('pass'=>$newpass));
+  }
+
+  public function traer($users,$pass){
+    $sql="SELECT * FROM web_users WHERE user='$users' AND pass='$pass'";
+    $query=$this->db->query($sql);
+    //cuando es un solo registro
+    return $query->row();
+    // cuando son varios registros
+    //  return $query->result();
+  }
+
 
 }
