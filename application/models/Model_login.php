@@ -8,13 +8,13 @@ class Model_login extends CI_Model {
   }
 
   public function validar($user,$pass,$secu){
-    $sql="SELECT count(*) cuenta from part_usuarios where user='$user' and pass='$pass' and security='$secu'";
+    $sql="SELECT count(*) cuenta from web_users where user='$user' and pass='$pass' and security='$secu'";
     $query=$this->db->query($sql);
     return $query->row();
   }
 
   public function consulta_user($user,$pass,$secu){
-    $sql="SELECT * from part_usuarios where user='$user' and pass='$pass' and security='$secu'";
+    $sql="SELECT * from web_users where user='$user' and pass='$pass' and security='$secu'";
     $query=$this->db->query($sql);
     return $query->row();
   }

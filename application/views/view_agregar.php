@@ -7,8 +7,8 @@
 </head>
 <body>
   <div data-role="page">
-    <div data-role="header" style="background-color: <?= $info->card_color; ?>">
-      <a href="<?= base_url(); ?>"  data-transition="flip" data-icon="home" style="background-color: <?= $info->bg_color; ?>; color:<?= $info->color_letra_botones; ?>;border-color: <?= $info->bg_botones; ?>"><?= $info->opcion1; ?></a>
+    <div data-role="header" style="background-color: <?= $info->bg_header; ?>">
+      <a href="<?= base_url(); ?>"  data-transition="flip" data-icon="home" style="background-color: <?= $info->bg_botones; ?>; color:<?= $info->color_letra_botones; ?>;border-color: <?= $info->bg_botones; ?>"><?= $info->opcion1; ?></a>
       <h1> <img src="<?= base_url().$info->img; ?>" width="100%"> </h1>
       <a href="<?= base_url(); ?>index.php/login" data-transition="flip"  data-icon="grid" style="background-color: <?= $info->bg_botones; ?>; color:<?= $info->color_letra_botones; ?>;border-color: <?= $info->bg_botones; ?>"><?= $info->opcion2; ?></a>
 
@@ -35,33 +35,7 @@
         <li data-role="list-divider" style="color: <?php echo $info->color_titulo; ?>;background-color: <?php echo $info->bg_titulo; ?>;text-align:center"><?php echo $info->titulo; ?></li>
       </ul>
       <hr>
-      <div class="ui-grid-a">
-        <div class="ui-block-c" style="width:100%">
-          <?php
-          foreach ($productos as $key) {
-            ?>
-            <div class="ui-bar ui-bar-a" style="background-color:<?php echo $info->bg_subtitulo; ?>;color:<?php echo $info->color_subtitulo; ?> ;text-align: center"><?php echo $key->nombre; ?></div>
-            <div class="ui-bar ui-bar-a" style="background-color:<?php echo $info->bg_card; ?>">
-              <center>
-                <img src="<?= base_url().$key->img; ?>" width="300" height="180">
-              </center>
-              <center>
-              <a href="<?= base_url(); ?>" class="ui-btn ui-btn-inline ui-icon-eye ui-btn-icon-left" data-transition="flip"
-                style="font-size: 12.5px;background-color: <?= $info->bg_botones; ?>; color:<?= $info->color_letra_botones; ?>;border-color: <?= $info->bg_botones; ?>">
-                <?= $info->opcion6; ?>
-              </a>
-              <a href="<?= base_url(); ?>" class="ui-btn ui-btn-inline ui-icon-search ui-btn-icon-left" data-transition="flip"
-                style="font-size: 12.5px;background-color: <?= $info->bg_botones; ?>; color:<?= $info->color_letra_botones; ?>;border-color: <?= $info->bg_botones; ?>">
-                <?= $info->opcion7; ?>
-              </a>
-              </center>
-            </div>
 
-            <?php
-          }
-          ?>
-        </div>
-      </div>
     </div>
     <div data-role="footer">
 

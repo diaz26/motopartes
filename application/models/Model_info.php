@@ -8,7 +8,7 @@ class model_info extends CI_Model {
   }
 
   public function consultMotoPartes(){
-    $sql="SELECT * from part_info where id=1";
+    $sql="SELECT * from web_banner where id=1";
     $query=$this->db->query($sql);
     return $query->row();
   }

@@ -23,6 +23,18 @@ class Productos extends CI_Controller {
     }
 	}
 
+	public function Agregar(){
+		if($this->session->userdata('logged_in')){
+			//$data = array('Datos'=>$this->Model_Producto->Obtenerprductos());
+			//$data['Datos']=$this->Model_Producto->Obtenerprductos();
+			$this->load->view('header');
+			$this->load->view('view_agregar');
+			$this->load->view('footer');
+		}else {
+			redirect("login");
+		}
+	}
+
 
 
 
