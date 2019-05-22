@@ -3,28 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html>
 <head>
-	<title>face fet</title>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>themes/temamotopartes.min.css" />
-  <link rel="stylesheet" href="<?php echo base_url(); ?>themes/jquery.mobile.icons.min.css" />
-  <script type="text/javascript" src=" <?php echo base_url(); ?>jquery.mobile/jquery.js"></script>
-  <script type="text/javascript" src="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
-
-
 
 </head>
 <body>
 
 
 
-  <div data-role="page" id="rta">
+  <div data-role="page">
     <div data-role="header">
 
 				<h1 style="font-style:Helvetica">motopartes</h1>
-				<a href="<?= base_url(); ?>index.php/login/session_dest" data-icon="grid"> Cerrar sesion</a>
+				<a href="<?= base_url(); ?>index.php/login/session_dest" data-icon="grid" data-ajax="false"> Cerrar sesion</a>
 
 			<nav data-role="navbar">
 
@@ -36,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 		<div class="ui-body ui-body-a ui-corner-all">
-      <h3><b>Agregar producto</b></h3>
+      <h3><b>Editar producto</b></h3>
       <hr>
       <form action="<?=base_url(); ?>index.php/productos/modificar/" method="post" enctype="multipart/form-data" data-ajax="false">
         <label><b>Nombre:</b></label><br>

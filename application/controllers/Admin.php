@@ -16,12 +16,10 @@ class Admin extends CI_Controller {
 			if($this->session->userdata('ROL')=='Admin'){
       	$nav['nav']=$this->model_nav->consultNav(1);
         $nav['productos']=$this->model_productos->productos();
-        $result['pedidosP']=$this->model_productos->consultPedidosP(1);
-        $result['pedidosD']=$this->model_productos->consultPedidosD(1);
+        $result['pedidosP']=$this->model_productos->consultPedidos(1);
 				$result['products']=$this->model_productos->productosPedidos();
-				$this->load->view('header_loged',$nav);
+				$this->load->view('header',$nav);
 				$this->load->view('view_admin',$result);
-				$this->load->view('footer');
 			}else {
 				$this->load->view('error_page');
 			}
@@ -54,40 +52,12 @@ class Admin extends CI_Controller {
           $dataCargada = $this->upload->data();
           $datos=array(
             'nombre'=>$this->input->post('nombre'),
-            'nombre_web'=>$this->input->post('nombre_web'),
-            'op1'=>$this->input->post('op1'),
-            'op2'=>$this->input->post('op2'),
-            'op4'=>$this->input->post('op4'),
-            'op3'=>$this->input->post('op3'),
-            'op31'=>$this->input->post('op31'),
-            'op32'=>$this->input->post('op32'),
-            'op33'=>$this->input->post('op33'),
-            'bg_color'=>$this->input->post('bg_color'),
-            'fuente'=>$this->input->post('fuente'),
-            'size'=>$this->input->post('size'),
-            'search'=>$this->input->post('search'),
-            'btn_bgcolor'=>$this->input->post('btn_bgcolor'),
-            'btn_bordercolor'=>$this->input->post('btn_bordercolor'),
             'logo'=> $urldeimagen.$dataCargada['file_name'],
             'paypal'=>$this->input->post('paypal'),
           );
         }else {
           $datos=array(
             'nombre'=>$this->input->post('nombre'),
-            'nombre_web'=>$this->input->post('nombre_web'),
-            'op1'=>$this->input->post('op1'),
-            'op2'=>$this->input->post('op2'),
-            'op4'=>$this->input->post('op4'),
-            'op3'=>$this->input->post('op3'),
-            'op31'=>$this->input->post('op31'),
-            'op32'=>$this->input->post('op32'),
-            'op33'=>$this->input->post('op33'),
-            'bg_color'=>$this->input->post('bg_color'),
-            'fuente'=>$this->input->post('fuente'),
-            'size'=>$this->input->post('size'),
-            'search'=>$this->input->post('search'),
-            'btn_bgcolor'=>$this->input->post('btn_bgcolor'),
-            'btn_bordercolor'=>$this->input->post('btn_bordercolor'),
             'paypal'=>$this->input->post('paypal'),
           );
         }

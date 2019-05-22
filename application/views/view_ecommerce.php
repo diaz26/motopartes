@@ -40,14 +40,14 @@
                 <img src="<?= base_url().$key->img;?>" style="width:200px; height:150px" >
                 <h2><?php echo $key->nombre; ?></h2>
                 <p><?php echo $key->precio; ?> $USD</p>
-                <form action="<?php echo base_url(); ?>index.php/carrito/agrega_item_carrito" method="get" data-ajax="false">
-                  <input type="hidden" name="id" value="<?php echo $key->referencia; ?>">
-                  <input type="hidden" name="valor_prod" value="<?php echo $key->precio; ?>">
-                  <input type="hidden" name="nombre_prod" value="<?php echo $key->nombre; ?>">
-                  <input type="hidden" name="ban" value="agrega" id="ban">
-                  <button class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-right" type="submit" name="cagregarcar">Al carrito</button>
-                </form>
               </a>
+              <form action="<?php echo base_url(); ?>index.php/carrito/agrega_item_carrito" method="get" data-ajax="false">
+                <input type="hidden" name="id" value="<?php echo $key->referencia; ?>">
+                <input type="hidden" name="valor_prod" value="<?php echo $key->precio; ?>">
+                <input type="hidden" name="nombre_prod" value="<?php echo $key->nombre; ?>">
+                <input type="hidden" name="ban" value="agrega" id="ban">
+                <button class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-right" type="submit" name="cagregarcar">Al carrito</button>
+              </form>
               <div class="ui-content" data-role="popup" id="compra<?= $key->id; ?>" data-theme="a" style="max-width:340px; padding-bottom:2em">
                 <center><img src="<?= base_url().$key->img;?>" width="250" height="200"></center>
                 <p style="font-size: 13px; margin-bottom: 0px; margin-top: 0px"><b>Descripcion:</b> <?= " ".$key->descripcion; ?></p>
@@ -71,13 +71,6 @@
                 <img src="<?= base_url().$product->img;?>" style="width:200px; height:150px" >
                 <h2><?php echo $product->nombre; ?></h2>
                 <p><?php echo $product->precio; ?> $USD</p>
-                <form action="<?php echo base_url(); ?>index.php/carrito/agrega_item_carrito" method="get" data-ajax="false">
-                  <input type="hidden" name="id" value="<?php echo $product->referencia; ?>">
-                  <input type="hidden" name="valor_prod" value="<?php echo $product->precio; ?>">
-                  <input type="hidden" name="nombre_prod" value="<?php echo $product->nombre; ?>">
-                  <input type="hidden" name="ban" value="agrega" id="ban">
-                  <button class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-right" type="submit" name="cagregarcar">Al carrito</button>
-                </form>
               </a>
               <div class="ui-content" data-role="popup" id="compra<?= $product->id; ?>" data-theme="a" style="max-width:340px; padding-bottom:2em">
                 <center><img src="<?= base_url().$product->img;?>" width="250" height="200"></center>
@@ -90,6 +83,13 @@
                 <p style="font-size: 13px; margin-bottom: 0px; margin-top: 0px"><b>ubicación:</b> <?= " ".$product->ubicacion; ?></p>
                 <a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-mini">Cerrar</a>
               </div>
+              <form action="<?php echo base_url(); ?>index.php/carrito/agrega_item_carrito" method="get" data-ajax="false">
+                <input type="hidden" name="id" value="<?php echo $product->referencia; ?>">
+                <input type="hidden" name="valor_prod" value="<?php echo $product->precio; ?>">
+                <input type="hidden" name="nombre_prod" value="<?php echo $product->nombre; ?>">
+                <input type="hidden" name="ban" value="agrega" id="ban">
+                <button class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-right" type="submit" name="cagregarcar">Al carrito</button>
+              </form>
 
             </li>
             <?php

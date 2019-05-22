@@ -2,17 +2,6 @@
 <html>
 <head>
 
-  <title>jQuery Mobile page</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>themes/temamotopartes.min.css" />
-<link rel="stylesheet" href="<?php echo base_url(); ?>themes/jquery.mobile.icons.min.css" />
-	<script type="text/javascript" src=" <?php echo base_url(); ?>jquery.mobile/jquery.js"></script>
-	<script type="text/javascript" src="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
-
 </head>
 
 </head>

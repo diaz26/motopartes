@@ -14,10 +14,9 @@ class Login extends CI_Controller {
 		$nav['nav']=$this->model_nav->consultNav(1);
 		$this->load->view('header',$nav);
 		$this->load->view('view_login');
-		$this->load->view('footer');
 	}
 
-	public function valida()
+	public function validar()
 	{
 		if (isset($_POST['user'])) {
 			$users=$this->input->post('user');

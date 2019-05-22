@@ -85,7 +85,7 @@ class Productos extends CI_Controller {
 
         $nav['nav']=$this->model_nav->consultNav(1);
         $dataid['producto']=$this->model_productos->producto($id);
-        $this->load->view('header_loged_o',$nav);
+        $this->load->view('header',$nav);
         $this->load->view('view_modproductos',$dataid);
       }else {
         $this->load->view('error_page');
@@ -164,9 +164,8 @@ class Productos extends CI_Controller {
     if ($this->session->userdata('logged_in')) {
       if($this->session->userdata('ROL')=='Admin'){
         $nav['nav']=$this->model_nav->consultNav(1);
-        $this->load->view('header_loged_o',$nav);
+        $this->load->view('header',$nav);
         $this->load->view('view_agregar');
-        $this->load->view('footer');
       }else {
         $this->load->view('error_page');
       }

@@ -3,18 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html>
 <head>
-	<title>face fet</title>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.mobile/jquery.mobile.structure-1.4.5.min.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>themes/temamotopartes.min.css" />
-  <link rel="stylesheet" href="<?php echo base_url(); ?>themes/jquery.mobile.icons.min.css" />
-  <script type="text/javascript" src=" <?php echo base_url(); ?>jquery.mobile/jquery.js"></script>
-  <script type="text/javascript" src="<?php echo base_url(); ?>jquery.mobile/jquery.mobile-1.4.5.js"></script>
-
-
-
 </head>
 <body>
 
@@ -38,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="ui-body ui-body-a ui-corner-all">
       <h3><b>Agregar producto</b></h3>
       <hr>
-      <form action="<?=base_url(); ?>index.php/Productos/agregardeverdad/" method="post" enctype="multipart/form-data"  data-ajax="false">
+      <form action="<?=base_url(); ?>index.php/Productos/agregardeverdad/" method="post" enctype="multipart/form-data" data-ajax="false">
         <label><b>Nombre:</b></label><br>
         <input type="text" class="form-control" name="nombre" required>
         <label><b>Marca:</b></label><br>
