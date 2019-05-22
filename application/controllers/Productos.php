@@ -14,9 +14,8 @@ class Productos extends CI_Controller {
     $nav['nav']=$this->model_nav->consultNav(1);
     $nav['productos']=$this->model_productos->productos();
     $nav['categ']=$this->model_productos->categorias();
-    $this->load->view('header_ecommerce',$nav);
+    $this->load->view('header',$nav);
     $this->load->view('view_ecommerce');
-    $this->load->view('footer');
   }
 
   public function product($ban=NULL)
@@ -25,9 +24,8 @@ class Productos extends CI_Controller {
       $nav['nav']=$this->model_nav->consultNav(1);
       $nav['product']=$this->model_productos->producto($ban);
       $nav['categ']=$this->model_productos->categorias();
-      $this->load->view('header_ecommerce',$nav);
+      $this->load->view('header',$nav);
       $this->load->view('view_ecommerce');
-      $this->load->view('footer');
     }else {
       redirect("productos",'refresh');
     }
@@ -74,9 +72,8 @@ class Productos extends CI_Controller {
       $nav['nav']=$this->model_nav->consultNav(1);
       $nav['productos']=$this->model_productos->categproductos($ban);
       $nav['categ']=$this->model_productos->categorias();
-      $this->load->view('header_ecommerce',$nav);
+      $this->load->view('header',$nav);
       $this->load->view('view_ecommerce');
-      $this->load->view('footer');
     }else {
       redirect("productos",'refresh');
     }

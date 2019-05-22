@@ -14,9 +14,8 @@ class Carrito extends CI_Controller {
   public function carga_carrito(){
     $result['Subtotalcar']= $this->caculo_Subtotal_carrito();
     $nav['nav']=$this->model_nav->consultNav(1);
-    $this->load->view('header_carrito',$nav);
+    $this->load->view('header',$nav);
     $this->load->view('view_carrito',$result);
-    $this->load->view('footer');
   }
 
   public function caculo_Subtotal_carrito(){

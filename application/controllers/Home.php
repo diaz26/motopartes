@@ -15,6 +15,5 @@ class Home extends CI_Controller {
 		$nav['productos']=$this->Model_productos->consultaproductos();
 		$this->load->view('header',$nav);
 		$this->load->view('view_home');
-		$this->load->view('footer');
 	}
 }
