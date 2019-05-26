@@ -91,7 +91,7 @@ class Model_productos extends CI_Model {
   }
 
   public function consultPedidos($id){
-    $sql= "SELECT * FROM web_pagos WHERE id_usuario=$id order by fecha_pago asc";
+    $sql= "SELECT wp.*, wpp.* FROM web_pagos wp, web_pedidos wpp WHERE wp.id_usuario=$id and wp.cod_pedido=wpp.cod_pedido order by fecha_pago asc";
     $query=$this->db->query($sql);
     return $query->result();
   }

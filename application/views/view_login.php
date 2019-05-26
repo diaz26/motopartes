@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <meta charset="utf-8">
 </head>
 
 </head>
 <body>
-  <div class="ui-grid-a">
-    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
-    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
-  </div><!-- /grid-a -->
-  <div data-role="page" id="rta">
+  <div data-role="page">
     <div data-role="header">
-      <a href="index.php" data-icon="home">inicio </a>
-			<h1><img src="<?php echo base_url(); ?>images/images1.jpg" alt=""> </h1>
-			<a href="<?= base_url(); ?>index.php/Todoloderegistro/" data-icon="grid" data-ajax="false"> Registrarse</a>
-			<nav data-role="navbar">
-					<ul>
-							<li><a href="#page2">a ningun lado </a> </li>
-							<li><a href="<?= base_url(); ?>index.php/login/Todoloderegistros" data-ajax="false">Registrarme</a> </li>
-
-					</ul>
-		 </nav>
+      <a href="<?=  base_url(); ?>" data-icon="home">Inicio </a>
+      <h1><img src="<?=base_url(); ?>images/logo.png" width="100%"></h1>
+      <a href="<?= base_url(); ?>index.php/productos" data-icon="grid" data-ajax="false">Productos</a>
 
     </div>
-    <div data-role="main">
-			<div class="ui-body ui-body-a ui-corner-all">
-      	<form class="" action="<?= base_url(); ?>index.php/Login/validar" method="post" data-ajax="false">
-          	<center>
-            	<div style="width:65%">
-                <?php echo $this->session->flashdata('msg'); ?>
-              	<input required type="text" name="user" style="text-align:center" placeholder="Usuario">
-              	<input required type="password" name="pass" style="text-align:center" placeholder="contrasena">
+    <div data-role="main" class="ui-content">
+      <form class="" action="<?= base_url(); ?>index.php/Login/validar" method="post" data-ajax="false">
+        <center>
+          <div style="width:65%">
+            <?php echo $this->session->flashdata('msg'); ?>
+            <input required type="text" name="user" style="text-align:center" placeholder="Usuario">
+            <input required type="password" name="pass" style="text-align:center" placeholder="contrasena">
 
-              	<button type="submit" name="button" style="width:50%">Ingresar</button>
-              <div style="text-align:center">
-              </div>
+            <button type="submit" name="button" style="width:50%">Ingresar</button>
+            <div style="text-align:center">
             </div>
-          </center>
-        </form>
-			</div>
-    </div>
-    <div data-role="footer">
-				<div class="ui-body ui-body-a ui-corner-all">
-				</div>
-
+          </div>
+        </center>
+      </form>
     </div>
   </div>
 </body>

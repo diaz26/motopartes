@@ -10,7 +10,7 @@
       <h1><img src="<?=base_url(); ?>images/logo.png" width="100%"></h1>
       <a href="<?= base_url(); ?>index.php/carrito/carga_carrito" data-transition="flip" data-ajax="false" data-icon="shop">Carrito</a>
     </div>
-    <div data-role="main">
+    <div data-role="main" class="ui-content">
       <div data-role="collapsible" data-mini="true">
         <h4>Categorias</h4>
         <ul data-role="listview">
